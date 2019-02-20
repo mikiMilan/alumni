@@ -1,0 +1,161 @@
+body{
+    background-color: rgb(247, 247, 247);
+}
+a {
+    color: #666;
+    text-decoration: none;
+    /*border: 1px solid transparent;*/
+}
+a:focus, a:hover {
+    color: #222;
+    text-decoration: underline;
+    /*border: 1px solid #ddd;*/
+}
+nav.meni span{
+    margin-right: 20px;
+}
+nav.meni{
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 260px;
+    background-image: url("../img/sidebar.jpg") ;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+nav.meni .logo{
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+nav.meni .logo img{
+    width: 100%;
+    padding: 10px 20px;
+}
+nav.meni .logo small{
+    text-transform: uppercase;
+    padding: 15px 10px;
+}
+nav.meni .bgcontent{
+    background-color: rgba(255, 255, 255, 0.89);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+nav.meni .nav-meni{
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #00bcd4;
+}
+.nav > li > a {
+    padding: 15px;
+}
+
+
+/*  content   */
+
+aside{ 
+    margin-left: 270px;
+}
+aside h2{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.meni-2{
+    display: none;
+}
+.container-fluid{
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 992px){
+    nav.meni .logo{
+        display: none;
+    }
+
+    .meni-2 {
+        display:block;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        margin: 10px;
+    }
+    .meni-2 img{
+        width: 120px;
+    }
+    .meni-in-out {
+        float: right;
+        vertical-align: top;
+    }
+      
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+      
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+        transform: rotate(-45deg) translate(-8px, 6px);
+    }
+      
+    .change .bar2 {opacity: 0;}
+      
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -6px);
+        transform: rotate(45deg) translate(-8px, -6px);
+    }
+    aside{
+        margin-left: 0px;
+    }
+    nav.meni{
+        width: 0px;
+    }
+    aside h2{
+        text-align: center;
+    }
+}
+
+
+
+
+.panel-default > .panel-heading {
+    color: #fff;
+    background: linear-gradient(60deg, #1a89a1, #4fe6bb);
+    border-color: #1a89a1;
+}
+.panel-heading {
+    padding: 5px 15px;
+    margin: -10px 20px 0px 20px;
+    border-color: #1a89a1;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(23, 160, 214, 0.4);
+}
+
+.well {
+    background-color: rgb(247, 247, 247);
+    border: 1px solid #46b8da;
+    border-radius: 0px;
+}
+.btn-info {
+    border-radius: 0px;
+}
+.row{
+    margin-bottom: 20px;
+}
+.input-group{
+    margin-bottom: 10px;
+}

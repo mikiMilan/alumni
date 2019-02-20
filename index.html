@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav id="myNav" class="meni">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            <small>SP matematika i informatika</small>
+        </div>
+        <ul class="nav nav-pills nav-stacked nav-meni">
+            <li role="presentation" class="active">
+                <a href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"></span>Алумни</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>Огласна табла</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>Посао/Пракса</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>Интересовање</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>Образованје</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>Кориснички профил</a>
+            </li>
+            <li role="presentation">
+                <a href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>Одјавите се</a>
+            </li>
+        </ul>
+        <div class="bgcontent"></div>
+    </nav>
+
+    <aside>
+        <div class="meni-2">
+            <img src="img/logo.png" alt="">
+            <div class="meni-in-out" onclick="myFunctionMeni(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <h2>Алумни</h2>
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Ime i prezime">
+                        <span class="input-group-btn">
+                            <button class="btn btn-info" type="button">
+                                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div>
+                <div class="col-md-9">
+                    <button class="btn btn-info" type="button" data-toggle="collapse" data-target="#collapseExample"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                        Филтер
+                    </button>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            Поредај по <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Регистрација - најновије</a></li>
+                            <li><a href="#">Регистрација - најновије</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Име - А-Ш</a></li>
+                            <li><a href="#">Име - Ш-А</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Година завршетка студија - опадајуће</a></li>
+                            <li><a href="#">Година завршетка студија - растуће</a></li>
+                        </ul>
+                    </div>
+
+                    <b>Svi korisnici</b>
+                </div>
+                <div class="col-md-12">
+                    <div class="collapse" id="collapseExample">
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="panel panel-info">
+                                        <div class="panel-body">
+                                            <h4>Образовање</h4>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Основне студије
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Мастер
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Магистар
+                                                </label>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Доктор
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-info">
+                                        <div class="panel-body">
+                                            <h4>Пракса</h4>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">
+                                                    Особе које су ишле на праксу/е током студирања
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="panel panel-info">
+                                        <div class="panel-body">
+                                            <h4>Посао</h4>
+
+                                            <select class="form-control">
+                                                <option>Није одабрано</option>
+                                                <option>Запослен</option>
+                                                <option>Незапослен</option>
+                                            </select>
+
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Основна школа
+                                                </label>
+                                            </div>
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Средња школа
+                                                </label>
+                                            </div>
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Универзитет
+                                                </label>
+                                            </div>
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Програмерска фирма
+                                                </label>
+                                            </div>
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Банка
+                                                </label>
+                                            </div>
+                                            <div class="checkbox disabled">
+                                                <label>
+                                                    <input type="checkbox" value="" disabled>
+                                                    Остало
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-info">
+                                        <div class="panel-body">
+                                            <h4>Интересовање</h4>
+                                            <div class="col-md-6">
+                                                <p>Област</p>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Алгебра
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Анализа
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Геометрија
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Вјероватноћа и статистика
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Велики подаци
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Машинско учење
+                                                        </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Programski jezik</p>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Java
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Python
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            C/C++
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            PHP
+                                                        </label>
+                                                </div>
+                                                <div class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="">
+                                                            Неки други програмски језик
+                                                        </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4">
+                                <input type="submi" class="btn btn-info btn-lg" value="Примјени филтер">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Петар Петровић</h3>
+                            <small>Дипломирани математичар и информатичар</small>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="img/user.png" alt="" class="img-responsive img-circle">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Посао: Назив установе/компаније</p>
+                                    <p>Интересовање: Јава, Алгебра, Машинско учење</p>
+                                    <a href="" class="btn btn-warning">Прикажи више</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Петар Петровић</h3>
+                            <small>Дипломирани математичар и информатичар</small>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="img/user.png" alt="" class="img-responsive img-circle">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Посао: Назив установе/компаније</p>
+                                    <p>Интересовање: Јава, Алгебра, Машинско учење</p>
+                                    <a href="" class="btn btn-warning">Прикажи више</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Петар Петровић</h3>
+                            <small>Дипломирани математичар и информатичар</small>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="img/user.png" alt="" class="img-responsive img-circle">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Посао: Назив установе/компаније</p>
+                                    <p>Интересовање: Јава, Алгебра, Машинско учење</p>
+                                    <a href="" class="btn btn-warning">Прикажи више</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Петар Петровић</h3>
+                            <small>Дипломирани математичар и информатичар</small>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="img/user.png" alt="" class="img-responsive img-circle">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Посао: Назив установе/компаније</p>
+                                    <p>Интересовање: Јава, Алгебра, Машинско учење</p>
+                                    <a href="" class="btn btn-warning">Прикажи више</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3>Петар Петровић</h3>
+                            <small>Дипломирани математичар и информатичар</small>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <img src="img/user.png" alt="" class="img-responsive img-circle">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Посао: Назив установе/компаније</p>
+                                    <p>Интересовање: Јава, Алгебра, Машинско учење</p>
+                                    <a href="" class="btn btn-warning">Прикажи више</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </aside>
+
+    <script src="js/meni.js"></script>
+</body>
+
+</html>
